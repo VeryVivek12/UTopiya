@@ -15,6 +15,7 @@ let package = Package(
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
         .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
+        .package(url: "https://github.com/httpswift/swifter.git", .upToNextMajor(from: "1.5.0"))
 
     ],
     targets: [
@@ -23,7 +24,9 @@ let package = Package(
         .executableTarget(
             name: "UTopiya",
             dependencies: [
-                 .product(name: "Logging", package: "swift-log")
+                 .product(name: "Logging", package: "swift-log"),
+                 .product(name: "Swifter", package: "swifter")
+                 
             ]),
 //        .target(
 //            name: "UTopiya",
