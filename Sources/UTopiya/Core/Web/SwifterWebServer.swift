@@ -22,7 +22,9 @@ class SwifterWebServer: WebServer {
             html {
                 body {
                     center {
-                        img { src = "https://swift.org/assets/images/swift.svg" }
+                        img {
+                            src = "https://swift.org/assets/images/swift.svg"
+                        }
                     }
                 }
             }
@@ -43,7 +45,7 @@ class SwifterWebServer: WebServer {
     }
 
     func stop() {
-        server.stop()
+        server.stop()
     }
 
     func getPort() -> UInt16 {

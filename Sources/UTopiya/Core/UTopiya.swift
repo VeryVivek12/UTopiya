@@ -41,11 +41,9 @@ public struct UTopiya {
     private func printBanner() -> Void {
         if self.bannerMode == Mode.OFF {
             return
-        }
-        else if self.bannerMode == Mode.LOG {
+        } else if self.bannerMode == Mode.LOG {
             log.info("########### Banner goes Here ###########")
-        }
-        else {
+        } else {
             print("########### Banner goes Here ###########")
         }
     }
