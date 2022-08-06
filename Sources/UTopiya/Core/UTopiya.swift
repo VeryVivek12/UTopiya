@@ -20,7 +20,7 @@ public struct UTopiya {
     private static var mainApp: (Any)? = nil
 
 
-    init(_ primarySource: Any, _ args: [String]) {
+    public init(_ primarySource: Any, _ args: [String]) {
         self.sources = Set<String>()
         self.bannerMode = Mode.CONSOLE
         self.banner = UTopiyaBanner()
