@@ -12,7 +12,7 @@ import Dispatch
 class SwifterWebServer: WebServer {
 
     private let server: HttpServer
-    private let port: UInt16
+    internal var port: UInt16
     let semaphore = DispatchSemaphore(value: 0)
 
     init(port: UInt16) {

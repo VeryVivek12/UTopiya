@@ -15,7 +15,9 @@ let package = Package(
             // Dependencies declare other packages that this package depends on.
             // .package(url: /* package url */, from: "1.0.0"),
             .package(url: "https://github.com/apple/swift-log.git", from: "1.4.2"),
-            .package(url: "https://github.com/httpswift/swifter.git", .upToNextMajor(from: "1.5.0"))
+            .package(url: "https://github.com/httpswift/swifter.git", .upToNextMajor(from: "1.5.0")),
+            .package(url: "https://github.com/apple/swift-nio.git", .upToNextMajor(from: "2.0.0"))
+
 
         ],
         targets: [
@@ -25,8 +27,10 @@ let package = Package(
                     name: "UTopiya",
                     dependencies: [
                         .product(name: "Logging", package: "swift-log"),
-                        .product(name: "Swifter", package: "swifter")
-
+                        .product(name: "Swifter", package: "swifter"),
+                        .product(name: "NIOCore", package: "swift-nio"),
+                        .product(name: "NIOPosix", package: "swift-nio"),
+                        .product(name: "NIOHTTP1", package: "swift-nio"),
                     ]),
             .testTarget(
                     name: "UTopiyaTests",

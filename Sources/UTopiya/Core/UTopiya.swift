@@ -32,7 +32,7 @@ public struct UTopiya {
         let startTime = Date()
         let timeTakenToReady = Date() - startTime
         printBanner()
-        let server: WebServer = SwifterWebServer(port: 5051)
+        let server: WebServer = SwiftNio2WebServer(port: 8080)
         server.start()
 
         log.info("Application started in \(timeTakenToReady) ms")
